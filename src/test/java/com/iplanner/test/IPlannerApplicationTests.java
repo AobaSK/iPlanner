@@ -51,13 +51,5 @@ class IPlannerApplicationTests {
         userTeamMapper.insert(userTeam);
     }
 
-    @Test
-    public void test(int A, int B, int X){
-        if (A<5 && B == 5){
-            X = X / A;
-        }
-        if (A==2 || X > 2){
-            X = X + 1;
-        }
-    }
+
 }

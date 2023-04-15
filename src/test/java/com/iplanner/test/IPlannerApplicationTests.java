@@ -26,11 +26,11 @@ class IPlannerApplicationTests {
     @Test
     public void insertUser(){
         User user = new User();
-        user.setUsername("Aoba");
-        user.setPassword("1");
-        user.setEmail("1");
+        user.setUsername("Aoba2");
+        user.setPassword("2");
+        user.setEmail("2");
         user.setPhone("15536933629");
-        user.setProfession("Java开发");
+        user.setProfession("前端");
         userMapper.insert(user);
     }
 
@@ -46,10 +46,11 @@ class IPlannerApplicationTests {
     @Test
     public void insertUserTeam(){
         UserTeam userTeam = new UserTeam();
-        userTeam.setUid(1644986003782688769L);
+        userTeam.setUid(1647189290401406978L);
         userTeam.setTid(1645002301325524994L);
         userTeamMapper.insert(userTeam);
     }
+
 
 
 }

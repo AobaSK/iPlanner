@@ -82,8 +82,22 @@ public class UserController {
     @GetMapping("/user/showTeam/{id}")
     @ResponseBody
     public List<Team> showTeam(@PathVariable("id") Long uid){
-        List<Team> teamList = userService.queryTeamByUserId(uid);
-        return teamList;
+        return userService.queryTeamByUserId(uid);
+    }
+
+    @GetMapping("/user/register/{email}/{pwd}")
+    public String register(@PathVariable("email") String email,@PathVariable("pwd") String password){
+        if(userService.queryUserByEmail(email) != null){
+            return "existed";
+        }else {
+            User user = new User();
+            user.setEmail(email);
+            user.setPassword(password);
+            user.setUsername("iPlanner");
+            Long uid = userService.insertUser(user);
+            return uid.toString();
+        }
+
     }
 
 }

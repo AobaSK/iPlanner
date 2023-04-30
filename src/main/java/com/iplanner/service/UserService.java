@@ -16,4 +16,6 @@ public interface UserService {
 
     List<Team> queryTeamByUserId(Long uid);
 
+    Long insertUser(User user);
+
 }

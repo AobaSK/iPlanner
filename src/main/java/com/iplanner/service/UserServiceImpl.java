@@ -92,4 +92,10 @@ public class UserServiceImpl implements UserService {
         }
         return teamList;
     }
+
+    @Override
+    public Long insertUser(User user) {
+        userMapper.insert(user);
+        return user.getId();
+    }
 }
